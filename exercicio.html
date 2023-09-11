@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercícios de Escolha Múltipla</title>
+</head>
+<body>
+    <h1>Exercícios de Escolha Múltipla</h1>
+
+    <!-- Exercício 1 -->
+    <div class="exercicio">
+        <p>1. Os símbolos de &lt; e de &gt; são usados
+            em HTML para delimitar tags. Mas se
+            quisermos mostrá-los no navegador,
+            precisamos representá-los como:</p>
+        <input type="radio" id="resp1a" name="resp1" value="a">
+        <label for="resp1a">a- #lt e #gt</label><br>
+        <input type="radio" id="resp1b" name="resp1" value="b">
+        <label for="resp1b">b- &menor e &maior</label><br>
+        <input type="radio" id="resp1c" name="resp1" value="c">
+        <label for="resp1c">c- &amp;lt; e &amp;gt;</label><br>
+        <input type="radio" id="resp1d" name="resp1" value="d">
+        <label for="resp1d">d- #&lt; e #&gt;</label><br>
+    </div>
+
+    <!-- Exercício 2 -->
+    <div class="exercicio">
+        <p>2. Dentro de um parágrafo no código
+            HTML, se escrevermos uma palavra em
+            cada linha, elas serão apresentadas no
+            navegador de que maneira?</p>
+        <input type="radio" id="resp2a" name="resp2" value="a">
+        <label for="resp2a">a- uma em cima da outra</label><br>
+        <input type="radio" id="resp2b" name="resp2" value="b">
+        <label for="resp2b">b- exatamente da maneira que digitamos</label><br>
+        <input type="radio" id="resp2c" name="resp2" value="c">
+        <label for="resp2c">c- uma ao lado da outra</label><br>
+        <input type="radio" id="resp2d" name="resp2" value="d">
+        <label for="resp2d">d- nenhuma palavra será exibida</label><br>
+    </div>
+
+    <!-- Exercício 3 -->
+    <div class="exercicio">
+        <p>3. A qualquer momento do código HTML,
+            se quisermos criar uma quebra de linha,
+            devemos usar qual tag?</p>
+        <input type="radio" id="resp3a" name="resp3" value="a">
+        <label for="resp3a">a- &lt;br&gt;</label><br>
+        <input type="radio" id="resp3b" name="resp3" value="b">
+        <label for="resp3b">b- &lt;row&gt;</label><br>
+        <input type="radio" id="resp3c" name="resp3" value="c">
+        <label for="resp3c">c- è só apertar ENTER;</label><br>
+        <input type="radio" id="resp3d" name="resp3" value="d">
+        <label for="resp3d">d- &lt;p&gt;</label><br>
+    </div>
+
+    <!-- Exercício 4 -->
+    <div class="exercicio">
+        <p>4. Os códigos como &euro; para mostrar
+            o símbolo € nas páginas são conhecidos
+            pelo nome de:</p>
+        <input type="radio" id="resp4a" name="resp4" value="a">
+        <label for="resp4a">a- HTML entities</label><br>
+        <input type="radio" id="resp4b" name="resp4" value="b">
+        <label for="resp4b">b- Symbol codes</label><br>
+        <input type="radio" id="resp4c" name="resp4" value="c">
+        <label for="resp4c">c- HTML symbols</label><br>
+        <input type="radio" id="resp4d" name="resp4" value="d">
+        <label for="resp4d">d- Symbol entities</label><br>
+    </div>
+
+    <!-- Exercício 5 -->
+    <div class="exercicio">
+        <p>5. Qual é código que usamos para inserir emoji?</p>
+        <input type="radio" id="resp5a" name="resp5" value="a">
+        <label for="resp5a">a- Emoji;</label><br>
+        <input type="radio" id="resp5b" name="resp5" value="b">
+        <label for="resp5b">b- &#x</label><br>
+        <input type="radio" id="resp5c" name="resp5" value="c">
+        <label for="resp5c">c- U#x</label><br>
+        <input type="radio" id="resp5d" name="resp5" value="d">
+        <label for="resp5d">d- ctrl+c e ctrl+v</label><br>
+    </div>
+
+    <!-- Exercício 6 -->
+    <div class="exercicio">
+        <p>6. Que código utilizaremos para mostrar
+            uma seta apontando para a direita (→)
+            na página?</p>
+        <input type="radio" id="resp6a" name="resp6" value="a">
+        <label for="resp6a">a- &amp;arrow;</label><br>
+        <input type="radio" id="resp6b" name="resp6" value="b">
+        <label for="resp6b">b- &amp;right;</label><br>
+        <input type="radio" id="resp6c" name="resp6" value="c">
+        <label for="resp6c">c- &amp;left;</label><br>
+        <input type="radio" id="resp6d" name="resp6" value="d">
+        <label for="resp6d">d- &amp;seta;</label><br>
+    </div>
+
+    <button onclick="verificarRespostas()">Verificar Respostas</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function verificarRespostas() {
+            const respostas = [];
+            const corretas = ["c", "c", "a", "a", "b", "b"];
+
+            for (let i = 1; i <= 6; i++) {
+                const respostaSelecionada = document.querySelector(`input[name="resp${i}"]:checked`);
+                if (respostaSelecionada) {
+                    respostas.push(respostaSelecionada.value);
+                } else {
+                    respostas.push(null);
+                }
+            }
+
+            const resultado = document.querySelector("#resultado");
+            resultado.innerHTML = "<h2>Resultado:</h2><ul>";
+
+            for (let i = 0; i < 6; i++) {
+                const exercicio = i + 1;
+                if (respostas[i] === corretas[i]) {
+                    resultado.innerHTML += `<li>Exercício ${exercicio}: <span style="color: green;">Correto</span></li>`;
+                } else {
+                    resultado.innerHTML += `<li>Exercício ${exercicio}: <span style="color: red;">Incorreto</span></li>`;
+                }
+            }
+
+            resultado.innerHTML += "</ul>";
+        }
+    </script>
+</body>
+</html>
