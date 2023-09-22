@@ -1,0 +1,25 @@
+Enunciado: Campeonato de Futebol
+
+Você foi designado para criar um programa em JavaScript
+ para registrar e organizar um campeonato de futebol. O programa deve permitir o cadastro de 5 times e o registro de 4 jogos para cada time, incluindo o número de gols marcados em cada partida. No final, o programa 
+deve exibir a tabela de resultados e indicar o vencedor do campeonato.
+
+O programa deve seguir as etapas a seguir:
+
+Cadastre 5 times, solicitando o nome de cada 
+time por meio do prompt.
+
+Para cada time, registre o resultado de 4 jogos, 
+incluindo o número de gols marcados pelo time em cada partida. Utilize um loop para solicitar essas informações.
+
+Calcule a pontuação de cada time com base nos resultados
+ dos jogos. Cada vitória vale 3 pontos, cada empate vale 1 ponto e cada derrota vale 0 pontos.
+
+Organize a tabela de resultados em ordem decrescente 
+de pontuação.
+
+Exiba a tabela de resultados na tela, mostrando o nome 
+de cada time, o número de jogos vencidos, empatados, perdidos, gols marcados e a pontuação total.
+
+Determine o vencedor do campeonato com base na pontuação
+ total e exiba o nome do time vencedor.
