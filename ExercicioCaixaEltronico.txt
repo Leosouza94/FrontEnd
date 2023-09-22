@@ -1,0 +1,18 @@
+Exercício: Caixa Eletrônico Simples em JavaScript
+
+Você está criando um programa de caixa eletrônico simples em JavaScript. O programa deve permitir ao usuário realizar saques e verificar o saldo da conta. As operações são baseadas em números inteiros positivos.
+
+Siga as instruções abaixo:
+
+Inicialize o saldo da conta com o valor de R$ 1000.
+
+Crie uma função para realizar saques. O usuário deve digitar o valor do saque, que deve ser um número inteiro positivo. Verifique se o saldo é suficiente para o saque e, se positivo, subtraia o valor do saldo.
+
+Crie uma função para verificar o saldo da conta e exibi-lo.
+
+Implemente um loop que permita ao usuário escolher entre as seguintes opções:
+
+Realizar um saque.
+Verificar o saldo da conta.
+Sair do programa.
+O programa deve continuar em execução até que o usuário escolha a opção de sair.
