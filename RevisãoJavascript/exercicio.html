@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercícios de Javascript</title>
+</head>
+<body>
+    <h1>Exercícios de Javascript</h1>
+
+    <form id="quiz-form">
+        <!-- Questão 1 -->
+        <p>1. O que é um array em javascript?</p>
+        <input type="radio" name="q1" value="a"> a) Um conjunto, em lista, de dados<br>
+        <input type="radio" name="q1" value="b"> b) Uma função específica para ordenar dados<br>
+        <input type="radio" name="q1" value="c"> c) Um operador condicional<br>
+        <input type="radio" name="q1" value="d"> d) Um objeto de data<br>
+        
+        <!-- Questão 2 -->
+        <p>2. Qual a palavra-chave utilizada para definir uma função em javascript?</p>
+        <input type="radio" name="q2" value="a"> a) funtion<br>
+        <input type="radio" name="q2" value="b"> b) function<br>
+        <input type="radio" name="q2" value="c"> c) def function<br>
+        <input type="radio" name="q2" value="d"> d) func<br>
+        
+        <!-- Questão 3 -->
+        <p>3. Qual opção lista os comparadores na seguinte ordem: igual, diferente, maior que, menor que</p>
+        <input type="radio" name="q3" value="a"> a) ==, <>, <, ><br>
+        <input type="radio" name="q3" value="b"> b) =, !=, >, <<br>
+        <input type="radio" name="q3" value="c"> c) ===, !==, >, <<br>
+        <input type="radio" name="q3" value="d"> d) ===, <!>, >, <<br>
+
+        <!-- Questão 4 -->
+        <p>4. Qual o método utilizado para remover o último elemento de um array em Javascript?</p>
+        <input type="radio" name="q4" value="a"> a) push()<br>
+        <input type="radio" name="q4" value="b"> b) pop()<br>
+        <input type="radio" name="q4" value="c"> c) shift()<br>
+        <input type="radio" name="q4" value="d"> d) unshift()<br>
+
+        <!-- Questão 5 -->
+        <p>5. Qual a palavra-chave utilizada para definir uma variável que não pode ser modificada em javascript?</p>
+        <input type="radio" name="q5" value="a"> a) const<br>
+        <input type="radio" name="q5" value="b"> b) let<br>
+        <input type="radio" name="q5" value="c"> c) var<br>
+        <input type="radio" name="q5" value="d"> d) static<br>
+
+        <!-- Questão 6 -->
+        <p>6. Considere o seguinte código em Javascript:<br>
+        let num = 49;<br>
+        if (num > 5) {<br>
+        num = num - 5<br>
+        } else {<br>
+        num = num + 9<br>
+        }<br>
+        console.log(num)</p>
+        <input type="text" name="q6" placeholder="Sua resposta aqui"><br>
+
+        <!-- Questão 7 -->
+        <p>7. Considere o seguinte código em Javascript:<br>
+        let x = 0<br>
+        while (x < 5) {<br>
+        x++<br>
+        }<br>
+        console.log(x)</p>
+        <input type="text" name="q7" placeholder="Sua resposta aqui"><br>
+
+        <!-- Questão 8 -->
+        <p>8. Qual a palavra-chave utilizada para interromper uma execução de laço em repetição em Javascript?</p>
+        <input type="radio" name="q8" value="a"> a) break<br>
+        <input type="radio" name="q8" value="b"> b) continue<br>
+        <input type="radio" name="q8" value="c"> c) return<br>
+        <input type="radio" name="q8" value="d"> d) exit<br>
+
+        <!-- Questão 9 -->
+        <p>9. O que é prompt em Javascript?</p>
+        <input type="radio" name="q9" value="a"> a) Uma função para criar um diálogo de confirmação<br>
+        <input type="radio" name="q9" value="b"> b) Uma função para criar um diálogo de alerta<br>
+        <input type="radio" name="q9" value="c"> c) Uma função para receber entrada do usuário<br>
+        <input type="radio" name="q9" value="d"> d) Uma função para exibir dados na tela<br>
+
+        <!-- Questão 10 -->
+        <p>10. Considere o código abaixo:<br>
+        let a = 100<br>
+        let b = "ola"<br>
+        console.log(a + b)</p>
+        <input type="text" name="q10" placeholder="Sua resposta aqui"><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <div id="respostas-corretas" style="display: none;">
+        <h2>Respostas Corretas:</h2>
+        <ul>
+            <li>1. O que é um array em javascript? Resposta correta: a) Um conjunto, em lista, de dados</li>
+            <li>2. Qual a palavra-chave utilizada para definir uma função em javascript? Resposta correta: b) function</li>
+            <li>3. Qual opção lista os comparadores na seguinte ordem: igual, diferente, maior que, menor que? Resposta correta: c) ===, !==, >, <</li>
+            <li>4. Qual o método utilizado para remover o último elemento de um array em Javascript? Resposta correta: b) pop()</li>
+            <li>5. Qual a palavra-chave utilizada para definir uma variável que não pode ser modificada em javascript? Resposta correta: a) const</li>
+            <li>6. Qual é o resultado que será impresso no console? Resposta correta: 44</li>
+            <li>7. Qual é o resultado que será impresso no console? Resposta correta: 5</li>
+            <li>8. Qual a palavra-chave utilizada para interromper uma execução de laço em repetição em Javascript? Resposta correta: a) break</li>
+            <li>9. O que é prompt em Javascript? Resposta correta: c) Uma função para receber entrada do usuário</li>
+            <li>10. Qual é o resultado que será impresso no console? Resposta correta: c) NaN</li>
+        </ul>
+    </div>
+
+    <script>
+        // Respostas corretas
+        const respostas = {
+            q1: "a",
+            q2: "b",
+            q3: "c",
+            q4: "b",
+            q5: "a",
+            q6: "44",
+            q7: "5",
+            q8: "a",
+            q9: "c",
+            q10: "c"
+        };
+
+        const form = document.getElementById('quiz-form');
+        const respostasCorretasDiv = document.getElementById('respostas-corretas');
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            let pontuacao = 0;
+            const respostasUsuario = {};
+
+            for (let i = 1; i <= 10; i++) {
+                const respostaSelecionada = form.querySelector(`input[name="q${i}"]:checked, input[name="q${i}"]`);
+                if (respostaSelecionada) {
+                    const questao = `q${i}`;
+                    respostasUsuario[questao] = respostaSelecionada.value;
+                    if (respostaSelecionada.value === respostas[questao]) {
+                        pontuacao++;
+                    }
+                }
+            }
+
+            
+
+            // Exibir respostas corretas
+            respostasCorretasDiv.style.display = "block";
+        });
+    </script>
+</body>
+</html>
