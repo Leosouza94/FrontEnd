@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Cabeçalho com Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="margin: 0;">
+    <header id="menu-desk" class="cabecalho">
+        <div class="cabecalho__logo">
+            <img id="logo" src="logo-musicdot.svg" alt="">
+        </div>
+        <nav id="cabecalho-desk" class="cabecalho__menu">
+            <div class="cabecalho__item-menu">
+                <a href="#">CONTATO</a>
+            </div>
+            <div class="cabecalho__item-menu">
+                <a href="#">ENTRAR</a>
+            </div>
+            <div class="cabecalho__item-menu">
+                <a href="#">MATRICULE-SE</a>
+            </div>
+        </nav>
+        <div id="cabecalho-mobile" class="cabecalho__menu">
+            <img id="dropdown-button" src="menu.png" alt="">
+            <div id="dropdown-menu" class="escondida">
+                <a href="#">CONTATO</a>
+                <a href="#">ENTRAR</a>
+                <a href="#">MATRICULE-SE</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="banner">
+        <div class="banner-texto">
+            <h1>Bem-vindo à nossa <br> escola de música!</h1>
+            <p>Descubra o mundo da música conosco.</p>
+            <a href="#" class="botao-saiba-mais">Saiba Mais</a>
+        </div>
+    </div>
+
+    <div class="container-pai">
+        <div class="container-filho">
+            <img class="imagem_instrumentos" src="guitar-instrument.png" alt="Imagem 1">
+            <h2>Aulas de Violão</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="container-filho">
+            <img class="imagem_instrumentos" src="drum.png" alt="Imagem 2">
+            <h2>Aulas de Bateria</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="container-filho">
+            <img class="imagem_instrumentos" src="violin.png" alt="Imagem 3">
+            <h2>Aulas de Violino</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="texto">
+            <h1>Torne-se o melhor!</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="imagem2">
+            <img class="imagem-filha" src="mini-banner_1.jpg" alt="Imagem">
+        </div>
+    </div>
+
+    <div class="container-avô-das-imagens">
+        <div class="container-pai-da-imagem">
+            <img class="imagens-filhas" src="car1.jpg" alt="Imagem 1">
+        </div>
+        <div class="container-pai-da-imagem">
+            <img class = "imagens-filhas" src="car2.jpg" alt="Imagem 2">
+        </div>
+        <div class="container-pai-da-imagem">
+            <img class="imagens-filhas" src="car3.jpg" alt="Imagem 3">
+        </div>
+    </div>
+
+    <div class="banner2">
+        <div class="form-container">
+            <form>
+                <h2>Formulário de Contato</h2>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="pai-da-tabela">
+        <table>
+            <tr>
+                <th class="wider">PRICING TABLE</th>
+                <th class="box">FREE</th>
+                <th class="box">R$ 9,99</th>
+                <th class="box">R$ 29,99</th>
+                <th class="box">R$ 49,99</th>
+            </tr>
+            <tr>
+                <td>Lorem, ipsum dolor sit amet.</td>
+                <td><img src="check.png" alt=""></td>
+                <td><img src="check.png" alt=""></td>
+                <td><img src="check.png" alt=""></td>
+                <td><img src="check.png" alt=""></td>
+            </tr>
+            <tr class="outra_cor">
+                <td>Lorem, ipsum dolor sit amet<br> consectetur adipisicing elit.</td>
+                <td><img src="check.png" alt=""></td>
+                <td><img src="check.png" alt=""></td>
+                <td><img src="check.png" alt=""></td>
+                <td><img src="check.png" alt=""></td>
+            </tr>
+            <tr>
+                <td>Lorem, ipsum dolor sit amet<br> consectetur adipisicing elit.</td>
+                <td><img src="check.png" alt=""></td>
+                <td><img src="check.png" alt=""></td>
+                <td><img src="check.png" alt=""></td>
+                <td><img src="check.png" alt=""></td>
+            </tr>
+            <tr class="outra_cor">
+                <td>Lorem, ipsum dolor sit amet<br> consectetur adipisicing elit.</td>
+                <td><img src="close.png" alt=""></td>
+                <td><img src="check.png" alt=""></td>
+                <td><img src="check.png" alt=""></td>
+                <td><img src="check.png" alt=""></td>
+            </tr>
+            <tr>
+                <td>Lorem, ipsum dolor sit amet<br> consectetur adipisicing elit.</td>
+                <td><img src="close.png" alt=""></td>
+                <td><img src="close.png" alt=""></td>
+                <td><img src="check.png" alt=""></td>
+                <td><img src="check.png" alt=""></td>
+            </tr>
+            <tr class="outra_cor">
+                <td>Lorem, ipsum dolor sit amet<br> consectetur adipisicing elit.</td>
+                <td><img src="close.png" alt=""></td>
+                <td><img src="close.png" alt=""></td>
+                <td><img src="close.png" alt=""></td>
+                <td><img src="check.png" alt=""></td>
+            </tr>
+            <tr id="last">
+                <td></td>
+                <td class="button"><a href="#">COMPRAR</a></td>
+                <td class="button"><a href="#">COMPRAR</a></td>
+                <td class="button"><a href="#">COMPRAR</a></td>
+                <td class="button"><a href="#">COMPRAR</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <footer class="footer">
+        <div class="logo">
+            <img src="logo-musicdot.svg" alt="Logo da empresa">
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
