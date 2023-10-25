@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de Formulário com Manipulação de innerHTML</title>
+</head>
+<body>
+    <h1>Formulário de Contato</h1>
+    <form id="meuFormulario" onsubmit="submeterFormulario(event)">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <input type="submit" value="Enviar">
+    </form>
+    <div id="mensagem"></div>
+
+    <script>
+        function submeterFormulario(event) {
+            event.preventDefault(); // Impede que o formulário seja enviado da maneira padrão.
+
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+
+            const mensagem = document.getElementById("mensagem");
+            
+            mensagem.innerHTML = `
+                <h2>Obrigado por enviar o formulário!</h2>
+                <p>Nome: ${nome}</p>
+                <p>Email: ${email}</p>
+            `;
+        }
+    </script>
+</body>
+</html>

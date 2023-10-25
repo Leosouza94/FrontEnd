@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de Inserção de Novos Elementos</title>
+</head>
+<body>
+    <ul id="lista">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        
+    </ul>
+    <button onclick="adicionarItem()">Adicionar Item</button>
+
+    <script>
+        function adicionarItem() {
+            const novaLi = document.createElement("li"); //função que cria um novo elemento
+            novaLi.textContent = "Novo item";
+            document.getElementById("lista").appendChild(novaLi); //adiciona como filho
+        }
+    </script>
+</body>
+</html>

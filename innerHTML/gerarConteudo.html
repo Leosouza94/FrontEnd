@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de Geração de Conteúdo Dinâmico</title>
+</head>
+<body>
+    <div id="conteudoDinamico"></div>
+
+    <script>
+        // Simulando dados recebidos do servidor
+        const dadosDoServidor = [
+            "Item 1",
+            "Item 2",
+            "Item 3",
+            "Item 4",
+            "Item 5"
+        ];
+
+        const conteudoDinamico = document.getElementById("conteudoDinamico");
+        dadosDoServidor.forEach(item => {
+            const paragrafo = document.createElement("p");
+            paragrafo.textContent = item;
+            conteudoDinamico.appendChild(paragrafo);
+        });
+    </script>
+</body>
+</html>
