@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Piada Aleatória</title>
+</head>
+<body>
+    <h1>Piada Aleatória</h1>
+    
+    <!-- Botão para buscar uma piada -->
+    <button onclick="buscarPiada()">Nova Piada</button>
+    
+    <!-- Local onde exibiremos a piada -->
+    <div id="piada"></div>
+
+    <script>
+        function buscarPiada() {
+            // URL da API JokeAPI para obter uma piada aleatória
+            const url = 'https://v2.jokeapi.dev/joke/Any?lang=pt';
+
+            // Faz uma solicitação à API JokeAPI
+            fetch(url)
+                .then(response => response.json()) // Converte a resposta em formato JSON
+                .then(data => {
+                    const piada = document.getElementById('piada');
+                    // Exibe a piada na página
+                    if (data.type === 'single') {
+                        piada.innerHTML = `<p>${data.joke}</p>`;
+                    } else if (data.type === 'twopart') {
+                        piada.innerHTML = `<p>${data.setup}</p><p>${data.delivery}</p>`;
+                    }
+                })
+                .catch(error => {
+                    // Em caso de erro, exibe uma mensagem de erro
+                    console.error('Erro na solicitação da API:', error);
+                    const piada = document.getElementById('piada');
+                    piada.innerHTML = 'Não foi possível obter uma piada neste momento.';
+                });
+        }
+    </script>
+</body>
+</html>
