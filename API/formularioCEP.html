@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consulta de CEP</title>
+</head>
+<body>
+    <h1>Consulta de CEP</h1>
+    
+    <!-- Campo de entrada para o CEP -->
+    <label for="cep">Digite o CEP: </label>
+    <input type="text" id="cep" placeholder="Ex: 12345-678">
+    
+    <!-- Botão para buscar informações de endereço -->
+    <button onclick="buscarEndereco()">Buscar Endereço</button>
+    
+    <!-- Local onde exibiremos as informações de endereço -->
+    <div id="endereco"></div>
+
+    <script>
+        function buscarEndereco() {
+            // Pega o número do CEP digitado pelo usuário
+            const cep = document.getElementById('cep').value;
+
+            // Monta a URL da API do ViaCEP com o CEP
+            /* A criaçã-o da URL é necessária para fazer 
+            a solicitação das informações à API porque 
+            as APIs da web são acessadas por meio de URLs. */
+            const url = `https://viacep.com.br/ws/${cep}/json/`;
+
+            // Faz uma solicitação à API do ViaCEP
+            /*O fetch é uma função em JavaScript que 
+            permite solicitar informações para uma API. */
+            fetch(url)
+                .then(response => response.json()) // // Quando a resposta chegar, converte em formato JSON.
+                .then(data => { // Quando a conversão para JSON estiver pronta, faça o seguinte:
+                    const endereco = document.getElementById('endereco');
+                    // Exibe as informações de endereço na página
+                    endereco.innerHTML = `
+                        <h2>Endereço para o CEP ${data.cep}</h2>
+                        <p>Rua: ${data.logradouro}</p>
+                        <p>Bairro: ${data.bairro}</p>
+                        <p>Cidade: ${data.localidade}</p>
+                        <p>Estado: ${data.uf}</p>
+                    `;
+                })
+                .catch(error => {
+                    // Em caso de erro, exibe uma mensagem de erro
+                    console.error('Erro na solicitação da API:', error);
+                    const endereco = document.getElementById('endereco');
+                    endereco.innerHTML = 'Não foi possível obter informações de endereço.';
+                });
+        }
+    </script>
+</body>
+</html>
